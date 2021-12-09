@@ -3,12 +3,12 @@
 @import './globalStyling/components';
 @import './globalStyling/variables';
 
-main {
+.main-section {
     @include flex-justify_center-items_center();
 }
 
 // Main section
-.main-section {
+#main-container {
     width: 80%;
     @include flex-justify_center-items_center();
     background: $ghost-white;
