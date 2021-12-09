@@ -2,3 +2,30 @@
 @import './globalStyling/colors';
 @import './globalStyling/components';
 @import './globalStyling/variables';
+
+main {
+    @include flex-justify_center-items_center();
+}
+
+// Main section
+.main-section {
+    width: 80%;
+    @include flex-justify_center-items_center();
+    background: $ghost-white;
+    padding: 2rem 4rem 4rem 4rem;
+    margin-top: 4rem;
+    border: 3px solid $cornflower-blue;
+    border-radius: 2rem;
+}
+
+// ---- Header ----
+.header {
+    width: 100%;
+    @include flex-justify_between-items_center();
+}
+
+// Header navigation
+.header-nav {
+    width: 25%;
+    @include flex-justify_between-items_center();
+}
