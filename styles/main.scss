@@ -3,29 +3,92 @@
 @import './globalStyling/components';
 @import './globalStyling/variables';
 
+main {
+    height: 100vh;
+    background: $magnolia;
+}
+
 .main-section {
-    @include flex-justify_center-items_center();
+  @include flex-justify_center-items_center();
 }
 
 // Main section
 #main-container {
-    width: 80%;
-    @include flex-justify_center-items_center();
-    background: $ghost-white;
-    padding: 2rem 4rem 4rem 4rem;
-    margin-top: 4rem;
-    border: 3px solid $cornflower-blue;
-    border-radius: 2rem;
+  width: 70%;
+  @include flex-column-justify_center-items_center();
+  background: $ghost-white;
+  padding: 2rem 4rem 4rem 4rem;
+  margin-top: 4rem;
+  border: 3px solid $cornflower-blue;
+  border-radius: 2rem;
+  box-shadow: 0 20px 60px -20px $cornflower-blue2;
 }
 
 // ---- Header ----
 .header {
-    width: 100%;
-    @include flex-justify_between-items_center();
+  width: 100%;
+  @include flex-justify_between-items_center();
 }
 
 // Header navigation
 .header-nav {
-    width: 25%;
-    @include flex-justify_between-items_center();
+  width: 25%;
+  @include flex-justify_between-items_center();
+}
+
+// ---- Weather card ----
+.weather-card {
+  width: 100%;
+  @include flex-justify_between-items_end();
+  background: rgb(50,148,229);
+  background: linear-gradient(54deg, rgba(50,148,229,1) 15%, rgba(114,133,255,1) 159%);
+  padding: 8rem 2rem 2rem 2rem;
+  margin-top: 2rem;
+  border-radius: 1.3rem;
+}
+
+// ---- Right side of the card - Temperature
+.weather-info_icon {
+    color: $white;
+    font-size: 4rem
+}
+// Temperature
+.card-temperature {
+    color: $white;
+    font: {
+        size: 9rem;
+        weight: 200;
+    }
+    line-height: 1;
+    letter-spacing: -0.9rem;
+}
+
+// Location
+.card-location {
+    color: $white;
+    font: {
+        size: 2.2rem;
+        weight: 300;
+    }
+}
+
+// Left side of the card - Time
+.weather-card_time {
+  @include flex-column-items_end();
+
+  .clock {
+    color: $white;
+    font: {
+      size: 2rem;
+      weight: 500;
+    }
+  }
+
+  .time-and-day {
+    color: $white;
+    font: {
+      size:2rem;
+      weight: 300;
+    }
+  }
 }

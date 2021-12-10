@@ -2,51 +2,56 @@
 
 // Logo
 .logo {
-    color: $cornflower-blue;
-    font: {
-        size: 2rem;
-        weight: 600;
-    }
+  color: $cornflower-blue;
+  font: {
+    size: 2.2rem;
+    weight: 700;
+  }
+
+  &:hover {
+    color: $neon-blue;
+    transition: 0.2s;
+  }
 }
 
 // Search box
 .search-box {
-    width: 80%;
-    background: $white;
-    padding: 0.5rem 1rem;
-    border: 2px solid $cadet-blue-crayola2;
-    border-radius: 0.8rem;
-    
-    .search-box__form {
-        @include flex-justify_between-items_center();
-    }
+  width: 80%;
+  background: $white;
+  padding: 0.5rem 1rem;
+  border: 2px solid $cadet-blue-crayola2;
+  border-radius: 0.8rem;
 
-    .search-box__input {
-        width: 100%;     
-        font-size: 1.4rem;
-    }
+  .search-box__form {
+    @include flex-justify_between-items_center();
+  }
 
-    .search-box__btn {
-        color: $cadet-blue-crayola;
-        margin-left: 1rem;
-        font-size: 1.4rem;
-        cursor: pointer;
+  .search-box__input {
+    width: 100%;
+    font-size: 1.4rem;
+  }
 
-        &:hover {
-            color: $cornflower-blue;
-            transition: 0.2s;
-        }
+  .search-box__btn {
+    color: $cadet-blue-crayola;
+    margin-left: 1rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+
+    &:hover {
+      color: $cornflower-blue;
+      transition: 0.2s;
     }
+  }
 }
 
 // Menu button
 .btn-menu {
-    color: $cornflower-blue;
-    font-size: 2rem;
-    cursor: pointer;
+  color: $cornflower-blue;
+  font-size: 2rem;
+  cursor: pointer;
 
-    &:hover {
-        color: $neon-blue;
-        transition: 0.2s;
-    }
+  &:hover {
+    color: $neon-blue;
+    transition: 0.2s;
+  }
 }
