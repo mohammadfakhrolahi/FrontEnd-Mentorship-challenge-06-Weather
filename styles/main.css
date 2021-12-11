@@ -224,8 +224,8 @@ main {
 
 .weather-card_time {
   display: flex;
-  flex-direction: column;
   align-items: flex-end;
+  flex-direction: column;
 }
 .weather-card_time .clock {
   color: #ffffff;
@@ -238,7 +238,14 @@ main {
   font-weight: 300;
 }
 
+.left-side-cards {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+}
+
 .details-card {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -263,8 +270,38 @@ main {
 .details-card .detail .detail__title-value .detail__value {
   font-weight: 700;
 }
-.details-card hr {
-  margin: 0 5rem;
+
+.rainfall-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #9ab2fa;
+  background: linear-gradient(90deg, #9ab2fa 15%, #7285ff 65%);
+  padding: 1.5rem 2rem;
+  margin-top: 4rem;
+  border-radius: 1.3rem;
+}
+.rainfall-card .rainfall-card__month {
+  display: flex;
+  flex-direction: column;
+}
+.rainfall-card .rainfall-card__year {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.rainfall-card .rainfall-card__month__monthly,
+.rainfall-card .rainfall-card__year__this-year {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.rainfall-card .rainfall-card__month__amount,
+.rainfall-card .rainfall-card__year__amount {
+  color: #ffffff;
+  font-weight: 700;
+}
+.rainfall-card .rainfall-card__year__amount {
+  color: #68e09b;
 }
 
 /*# sourceMappingURL=main.css.map */

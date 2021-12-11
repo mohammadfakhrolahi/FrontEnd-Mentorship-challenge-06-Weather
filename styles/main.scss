@@ -97,9 +97,14 @@ main {
   }
 }
 
+.left-side-cards {
+  width: 35%;
+  @include flex-column();
+}
+
 // Details card - humidity, UV index, sunset, sunrise
 .details-card {
-  // width: 30%;
+  width: 100%;
   @include flex-justify_center-items_center();
   background: $white;
   padding: 1rem 2rem;
@@ -125,8 +130,41 @@ main {
       }
     }
   }
+}
 
-  hr {
-    margin: 0 5rem;
+// Rainfall card
+.rainfall-card {
+  // width: 100%;
+  @include flex-justify_between-items_center();
+  background: rgb(154, 178, 250);
+  background: linear-gradient(
+    90deg,
+    rgba(154, 178, 250, 1) 15%,
+    rgba(114, 133, 255, 1) 65%
+  );
+  padding: 1.5rem 2rem;
+  margin-top: 4rem;
+  border-radius: 1.3rem;
+
+  .rainfall-card__month {
+    @include flex-column();
+  }
+  .rainfall-card__year {
+    @include flex-column-items_end();
+  }
+  .rainfall-card__month__monthly,
+  .rainfall-card__year__this-year {
+    color: $white;
+    margin-bottom: 1rem;
+  }
+
+  .rainfall-card__month__amount,
+  .rainfall-card__year__amount {
+    color: $white;
+    font-weight: 700;
+  }
+
+  .rainfall-card__year__amount {
+    color: $medium-aquamarine;
   }
 }
