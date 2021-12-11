@@ -4,8 +4,8 @@
 @import './globalStyling/variables';
 
 main {
-    height: 100vh;
-    background: $magnolia;
+  height: 100vh;
+  background: $magnolia;
 }
 
 .main-section {
@@ -40,36 +40,40 @@ main {
 .weather-card {
   width: 100%;
   @include flex-justify_between-items_end();
-  background: rgb(50,148,229);
-  background: linear-gradient(54deg, rgba(50,148,229,1) 15%, rgba(114,133,255,1) 159%);
+  background: rgb(50, 148, 229);
+  background: linear-gradient(
+    54deg,
+    rgba(50, 148, 229, 1) 15%,
+    rgba(114, 133, 255, 1) 159%
+  );
   padding: 8rem 2rem 2rem 2rem;
-  margin-top: 2rem;
+  margin: 2rem 0 4rem 0;
   border-radius: 1.3rem;
 }
 
 // ---- Right side of the card - Temperature
 .weather-info_icon {
-    color: $white;
-    font-size: 4rem
+  color: $white;
+  font-size: 4rem;
 }
 // Temperature
 .card-temperature {
-    color: $white;
-    font: {
-        size: 9rem;
-        weight: 200;
-    }
-    line-height: 1;
-    letter-spacing: -0.9rem;
+  color: $white;
+  font: {
+    size: 9rem;
+    weight: 200;
+  }
+  line-height: 1;
+  letter-spacing: -0.9rem;
 }
 
 // Location
 .card-location {
-    color: $white;
-    font: {
-        size: 2.2rem;
-        weight: 300;
-    }
+  color: $white;
+  font: {
+    size: 2.2rem;
+    weight: 300;
+  }
 }
 
 // Left side of the card - Time
@@ -87,8 +91,42 @@ main {
   .time-and-day {
     color: $white;
     font: {
-      size:2rem;
+      size: 2rem;
       weight: 300;
     }
+  }
+}
+
+// Details card - humidity, UV index, sunset, sunrise
+.details-card {
+  // width: 30%;
+  @include flex-justify_center-items_center();
+  background: $white;
+  padding: 1rem 2rem;
+  border: 2px solid $cadet-blue-crayola2;
+  border-radius: 1.3rem;
+
+  .details-card_half__top-detail {
+    margin-bottom: 6rem;
+  }
+
+  .detail {
+    display: flex;
+
+    .detail__icon {
+      margin-right: 1rem;
+    }
+
+    .detail__title-value {
+      @include flex-column();
+
+      .detail__value {
+        font-weight: 700;
+      }
+    }
+  }
+
+  hr {
+    margin: 0 5rem;
   }
 }
