@@ -1,9 +1,30 @@
+// Row
 @mixin flex-justify_center-items_center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+@mixin flex-justify_between-items_center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-justify_between-items_end {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+@mixin flex-wrap-justify_center-items_center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+// Column
 @mixin flex-column-items_end {
   display: flex;
   flex-direction: column;
@@ -26,16 +47,4 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-@mixin flex-justify_between-items_center {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@mixin flex-justify_between-items_end {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
 }

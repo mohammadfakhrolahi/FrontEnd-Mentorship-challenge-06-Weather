@@ -15,7 +15,8 @@ main {
 // Main section
 #main-container {
   width: 70%;
-  @include flex-column-justify_center-items_center();
+  @include flex-wrap-justify_center-items_center();
+  // @include flex-column-justify_center-items_center();
   background: $ghost-white;
   padding: 2rem 4rem 4rem 4rem;
   margin-top: 4rem;
@@ -40,7 +41,7 @@ main {
 .weather-card {
   width: 100%;
   @include flex-justify_between-items_end();
-  background: rgb(50, 148, 229);
+  // background: rgb(50, 148, 229);
   background: linear-gradient(
     54deg,
     rgba(50, 148, 229, 1) 15%,
@@ -54,8 +55,10 @@ main {
 
 // ---- Right side of the card - Temperature
 .weather-info_icon {
-  color: $white;
-  font-size: 4rem;
+  width: 3.8rem;
+  height: 3.8rem;
+  filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(277deg)
+    brightness(108%) contrast(101%);
 }
 // Temperature
 .card-temperature {
@@ -98,9 +101,14 @@ main {
   }
 }
 
-.left-side-cards {
+.cards-container-1 {
   width: 35%;
   @include flex-column();
+}
+.cards-container-2 {
+  width: 65%;
+  @include flex-column();
+  padding-left: 4rem;
 }
 
 // Details card - humidity, UV index, sunset, sunrise
@@ -110,7 +118,7 @@ main {
   background: $white;
   padding: 1rem 2rem;
   border: 2px solid $cadet-blue-crayola2;
-  border-radius: 1.3rem;
+  // border-radius: 1.3rem;
 
   .details-card_half__top-detail {
     margin-bottom: 6rem;
@@ -135,9 +143,9 @@ main {
 
 // Rainfall card
 .rainfall-card {
-  // width: 100%;
+  width: 100%;
   @include flex-justify_between-items_center();
-  background: rgb(154, 178, 250);
+  // background: rgb(154, 178, 250);
   background: linear-gradient(
     90deg,
     rgba(154, 178, 250, 1) 15%,
@@ -145,7 +153,7 @@ main {
   );
   padding: 1.5rem 2rem;
   margin-top: 4rem;
-  border-radius: 1.3rem;
+  // border-radius: 1.3rem;
   box-shadow: 0 7px 20px 0 $cornflower-blue3;
 
   .rainfall-card__month {
@@ -168,5 +176,36 @@ main {
 
   .rainfall-card__year__amount {
     color: $medium-aquamarine;
+  }
+}
+
+
+// ---- Graph card ----
+.graph-card {
+  width: 100%;
+  @include flex-column();
+  background: $white;
+  border: 2px solid $cadet-blue-crayola2;
+
+  .graph-card__daily-weather-info {
+    @include flex-justify_center-items_center();
+    padding: 0 2rem;
+
+    .daily-weather-info-box {
+      @include flex-column-justify_center-items_center();
+      .daily-weather-info-box__day {
+        font-weight: 500;
+      }
+      .daily-weather-info-box__icon {
+        margin: 1.2rem 0;
+      }
+
+      .daily-weather-info-box__temperature {
+        font: {
+          size: 1.4rem;
+          weight: 900;
+        }
+      }
+    }
   }
 }

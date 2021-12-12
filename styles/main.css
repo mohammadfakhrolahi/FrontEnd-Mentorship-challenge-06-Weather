@@ -141,7 +141,12 @@ hr {
   height: 2.8rem;
 }
 
-.detail__icon {
+.icon-small {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.icon-color-blue {
   filter: invert(52%) sepia(27%) saturate(3976%) hue-rotate(210deg) brightness(101%) contrast(101%);
 }
 
@@ -150,6 +155,18 @@ hr {
   height: 110px;
   background: #e9ebf3;
   border: none;
+}
+
+.hr-small {
+  width: 2px;
+  height: 60px;
+  background: #e9ebf3;
+  border: none;
+}
+
+.card-style {
+  padding: 1.5rem 2rem;
+  border-radius: 1.3rem;
 }
 
 main {
@@ -166,7 +183,7 @@ main {
 #main-container {
   width: 70%;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background: #f8f8ff;
@@ -196,7 +213,6 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  background: #3294e5;
   background: linear-gradient(54deg, #3294e5 15%, #7285ff 159%);
   padding: 8rem 2rem 2rem 2rem;
   margin: 2rem 0 4rem 0;
@@ -205,8 +221,9 @@ main {
 }
 
 .weather-info_icon {
-  color: #ffffff;
-  font-size: 4rem;
+  width: 3.8rem;
+  height: 3.8rem;
+  filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(277deg) brightness(108%) contrast(101%);
 }
 
 .card-temperature {
@@ -239,10 +256,17 @@ main {
   font-weight: 300;
 }
 
-.left-side-cards {
+.cards-container-1 {
   width: 35%;
   display: flex;
   flex-direction: column;
+}
+
+.cards-container-2 {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 4rem;
 }
 
 .details-card {
@@ -253,7 +277,6 @@ main {
   background: #ffffff;
   padding: 1rem 2rem;
   border: 2px solid #e9ebf3;
-  border-radius: 1.3rem;
 }
 .details-card .details-card_half__top-detail {
   margin-bottom: 6rem;
@@ -273,14 +296,13 @@ main {
 }
 
 .rainfall-card {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #9ab2fa;
   background: linear-gradient(90deg, #9ab2fa 15%, #7285ff 65%);
   padding: 1.5rem 2rem;
   margin-top: 4rem;
-  border-radius: 1.3rem;
   box-shadow: 0 7px 20px 0 #7285ff93;
 }
 .rainfall-card .rainfall-card__month {
@@ -304,6 +326,36 @@ main {
 }
 .rainfall-card .rainfall-card__year__amount {
   color: #68e09b;
+}
+
+.graph-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 2px solid #e9ebf3;
+}
+.graph-card .graph-card__daily-weather-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+.graph-card .graph-card__daily-weather-info .daily-weather-info-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.graph-card .graph-card__daily-weather-info .daily-weather-info-box .daily-weather-info-box__day {
+  font-weight: 500;
+}
+.graph-card .graph-card__daily-weather-info .daily-weather-info-box .daily-weather-info-box__icon {
+  margin: 1.2rem 0;
+}
+.graph-card .graph-card__daily-weather-info .daily-weather-info-box .daily-weather-info-box__temperature {
+  font-size: 1.4rem;
+  font-weight: 900;
 }
 
 /*# sourceMappingURL=main.css.map */

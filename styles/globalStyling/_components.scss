@@ -62,14 +62,34 @@
   height: 2.8rem;
 }
 
+.icon-small {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
 // Icon color - #7285ff
-.detail__icon {
+.icon-color-blue {
   filter: invert(52%) sepia(27%) saturate(3976%) hue-rotate(210deg) brightness(101%) contrast(101%);
 }
 
+// hr tags
 .hr-big {
   width: 2px;
   height: 110px;
   background: $cadet-blue-crayola2;
   border: none;
+}
+
+.hr-small {
+  width: 2px;
+  height: 60px;
+  background: $cadet-blue-crayola2;
+  border: none;
+}
+
+// Card style
+.card-style {
+  padding: 1.5rem 2rem;
+  border-radius: 1.3rem;
+  //margin: 2rem 0 4rem 0;
 }
