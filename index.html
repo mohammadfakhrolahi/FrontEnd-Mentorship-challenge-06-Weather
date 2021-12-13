@@ -8,6 +8,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"></script>
+
+
         <title>Document</title>
     </head>
     <body>
@@ -37,8 +40,6 @@
 
 
                     <div class="weather-card">
-                        <!-- <img src="./styles/images/4.png" alt="card background"> -->
-
                         <div class="weather-info">
                             <img src="./icons/sun-solid.svg" class="weather-info_icon">
 
@@ -108,12 +109,14 @@
                     </div>
 
                     <div class="cards-container-2">
-                        <div class="graph-card card-style">
+                        <div class="chart-card card-style">
                             <span>Temperature . Precipitation . Wind</span>
     
-                            <div class="graph">graph</div>
+                            <div class="chart">
+                                <canvas id="myChart"></canvas>
+                            </div>
     
-                            <div class="graph-card__daily-weather-info">
+                            <div class="chart-card__daily-weather-info">
                                 <div class="daily-weather-info-box">
                                     <div class="daily-weather-info-box__day">MON</div>
                                     <div class="daily-weather-info-box__icon">
@@ -127,9 +130,9 @@
                                 <div class="daily-weather-info-box">
                                     <div class="daily-weather-info-box__day">TUE</div>
                                     <div class="daily-weather-info-box__icon">
-                                        <img src="./icons/sun.svg" class="icon-small icon-color-blue" alt="weather-icon">
+                                        <img src="./icons/cloud-drizzle.svg" class="icon-small icon-color-blue" alt="weather-icon">
                                     </div>
-                                    <div class="daily-weather-info-box__temperature">13°</div>
+                                    <div class="daily-weather-info-box__temperature">14°</div>
                                 </div>
 
                                 <hr class="hr-small">
@@ -137,9 +140,9 @@
                                 <div class="daily-weather-info-box">
                                     <div class="daily-weather-info-box__day">WED</div>
                                     <div class="daily-weather-info-box__icon">
-                                        <img src="./icons/sun.svg" class="icon-small icon-color-blue" alt="weather-icon">
+                                        <img src="./icons/cloud-lightning.svg" class="icon-small icon-color-blue" alt="weather-icon">
                                     </div>
-                                    <div class="daily-weather-info-box__temperature">13°</div>
+                                    <div class="daily-weather-info-box__temperature">12°</div>
                                 </div>
 
                                 <hr class="hr-small">
@@ -147,9 +150,9 @@
                                 <div class="daily-weather-info-box">
                                     <div class="daily-weather-info-box__day">THU</div>
                                     <div class="daily-weather-info-box__icon">
-                                        <img src="./icons/sun.svg" class="icon-small icon-color-blue" alt="weather-icon">
+                                        <img src="./icons/cloud-rain.svg" class="icon-small icon-color-blue" alt="weather-icon">
                                     </div>
-                                    <div class="daily-weather-info-box__temperature">13°</div>
+                                    <div class="daily-weather-info-box__temperature">9°</div>
                                 </div>
 
                                 <hr class="hr-small">
@@ -157,9 +160,9 @@
                                 <div class="daily-weather-info-box">
                                     <div class="daily-weather-info-box__day">FRI</div>
                                     <div class="daily-weather-info-box__icon">
-                                        <img src="./icons/sun.svg" class="icon-small icon-color-blue" alt="weather-icon">
+                                        <img src="./icons/cloud-snow.svg" class="icon-small icon-color-blue" alt="weather-icon">
                                     </div>
-                                    <div class="daily-weather-info-box__temperature">13°</div>
+                                    <div class="daily-weather-info-box__temperature">-7°</div>
                                 </div>
 
                                 <hr class="hr-small">
@@ -167,9 +170,9 @@
                                 <div class="daily-weather-info-box">
                                     <div class="daily-weather-info-box__day">Mon</div>
                                     <div class="daily-weather-info-box__icon">
-                                        <img src="./icons/sun.svg" class="icon-small icon-color-blue" alt="weather-icon">
+                                        <img src="./icons/cloud.svg" class="icon-small icon-color-blue" alt="weather-icon">
                                     </div>
-                                    <div class="daily-weather-info-box__temperature">13°</div>
+                                    <div class="daily-weather-info-box__temperature">2°</div>
                                 </div>
 
                                 <hr class="hr-small">
@@ -177,9 +180,9 @@
                                 <div class="daily-weather-info-box">
                                     <div class="daily-weather-info-box__day">Mon</div>
                                     <div class="daily-weather-info-box__icon">
-                                        <img src="./icons/sun.svg" class="icon-small icon-color-blue" alt="weather-icon">
+                                        <img src="./icons/wind.svg" class="icon-small icon-color-blue" alt="weather-icon">
                                     </div>
-                                    <div class="daily-weather-info-box__temperature">13°</div>
+                                    <div class="daily-weather-info-box__temperature">-6°</div>
                                 </div>
                             </div>
 
@@ -191,5 +194,9 @@
                 </div>
             </section>
         </main>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+
+       <script src="./scripts/chart.js"></script>
+        
     </body>
 </html>

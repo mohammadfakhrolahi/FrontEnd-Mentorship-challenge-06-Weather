@@ -169,6 +169,11 @@ hr {
   border-radius: 1.3rem;
 }
 
+.myChart {
+  width: 100%;
+  height: auto;
+}
+
 main {
   height: 100vh;
   background: #eef0ff;
@@ -210,10 +215,10 @@ main {
 
 .weather-card {
   width: 100%;
+  background: url("/images/01.png") center/cover no-repeat;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  background: linear-gradient(54deg, #3294e5 15%, #7285ff 159%);
   padding: 8rem 2rem 2rem 2rem;
   margin: 2rem 0 4rem 0;
   border-radius: 1.3rem;
@@ -328,32 +333,32 @@ main {
   color: #68e09b;
 }
 
-.graph-card {
+.chart-card {
   width: 100%;
   display: flex;
   flex-direction: column;
   background: #ffffff;
   border: 2px solid #e9ebf3;
 }
-.graph-card .graph-card__daily-weather-info {
+.chart-card .chart-card__daily-weather-info {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 2rem;
 }
-.graph-card .graph-card__daily-weather-info .daily-weather-info-box {
+.chart-card .chart-card__daily-weather-info .daily-weather-info-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.graph-card .graph-card__daily-weather-info .daily-weather-info-box .daily-weather-info-box__day {
+.chart-card .chart-card__daily-weather-info .daily-weather-info-box .daily-weather-info-box__day {
   font-weight: 500;
 }
-.graph-card .graph-card__daily-weather-info .daily-weather-info-box .daily-weather-info-box__icon {
+.chart-card .chart-card__daily-weather-info .daily-weather-info-box .daily-weather-info-box__icon {
   margin: 1.2rem 0;
 }
-.graph-card .graph-card__daily-weather-info .daily-weather-info-box .daily-weather-info-box__temperature {
+.chart-card .chart-card__daily-weather-info .daily-weather-info-box .daily-weather-info-box__temperature {
   font-size: 1.4rem;
   font-weight: 900;
 }

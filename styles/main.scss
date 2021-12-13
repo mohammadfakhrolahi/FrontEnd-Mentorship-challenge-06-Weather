@@ -37,16 +37,21 @@ main {
   @include flex-justify_between-items_center();
 }
 
-// ---- Weather card ----
-.weather-card {
-  width: 100%;
+
+// .weather-card__background {
+  // }
+  
+  // ---- Weather card ----
+  .weather-card {
+    width: 100%;
+    background: url('/images/01.png') center/cover no-repeat;
   @include flex-justify_between-items_end();
   // background: rgb(50, 148, 229);
-  background: linear-gradient(
-    54deg,
-    rgba(50, 148, 229, 1) 15%,
-    rgba(114, 133, 255, 1) 159%
-  );
+  // background: linear-gradient(
+  //   54deg,
+  //   rgba(50, 148, 229, 1) 15%,
+  //   rgba(114, 133, 255, 1) 159%
+  // );
   padding: 8rem 2rem 2rem 2rem;
   margin: 2rem 0 4rem 0;
   border-radius: 1.3rem;
@@ -180,14 +185,14 @@ main {
 }
 
 
-// ---- Graph card ----
-.graph-card {
+// ---- Chart card ----
+.chart-card {
   width: 100%;
   @include flex-column();
   background: $white;
   border: 2px solid $cadet-blue-crayola2;
 
-  .graph-card__daily-weather-info {
+  .chart-card__daily-weather-info {
     @include flex-justify_center-items_center();
     padding: 0 2rem;
 
