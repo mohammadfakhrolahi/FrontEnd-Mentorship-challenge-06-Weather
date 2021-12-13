@@ -31,15 +31,6 @@
 //     config
 //     );
 
-
-// // let myChart = document.querySelector('#myChart').getContext('2d')
-// // window.addEventListener('beforeprint', () => {
-// //   myChart.resize(600, 200)
-// // })
-// // window.addEventListener('afterprint', () => {
-// //   myChart.resize()
-// // })
-
 const weeklyChart = new Chart(myChart, {
   type: 'line',
   data: {
@@ -47,34 +38,34 @@ const weeklyChart = new Chart(myChart, {
     datasets: [
       {
         label: 'Temperature',
-        data: [13, 8, 5, 3, -4, 5, 2],
-        fill: true,
-        tension: 0.4,
-        pointRadius: 0,
-        borderColor: '#9B5DE5',
-        backgroundColor: '#ffffff00',
-        responsive: true,
-      },
-      {
-        label: 'Precipitation',
-        data: [16, 4, 8, 3, -1, -8, 0],
+        data: [3, 13, 5, 1, -4, -7, -10],
         fill: true,
         tension: 0.4,
         pointRadius: 0,
         borderColor: '#7285ff',
-        backgroundColor: '#ffffff00',
+        backgroundColor: '#7285ff38',
         responsive: true,
       },
-      {
-        label: 'Wind',
-        data: [1, 5, 2, 7, 13, 10, 17],
-        fill: true,
-        tension: 0.4,
-        pointRadius: 0,
-        borderColor: '#F15BB5',
-        backgroundColor: '#ffffff00',
-        responsive: true,
-      },
+    //   {
+    //     label: 'Precipitation',
+    //     data: [16, 4, 8, 3, -1, -8, 0],
+    //     fill: true,
+    //     tension: 0.4,
+    //     pointRadius: 0,
+    //     borderColor: '#9B5DE5',
+    //     backgroundColor: '#ffffff00',
+    //     responsive: true,
+    //   },
+    //   {
+    //     label: 'Wind',
+    //     data: [1, 5, 2, 7, 13, 10, 17],
+    //     fill: true,
+    //     tension: 0.4,
+    //     pointRadius: 0,
+    //     borderColor: '#F15BB5',
+    //     backgroundColor: '#ffffff00',
+    //     responsive: true,
+    //   },
     ],
   },
 
@@ -98,18 +89,18 @@ const weeklyChart = new Chart(myChart, {
     scales: {
       x: {
         grid: {
-          display: true,
+          display: false,
         },
       },
       y: {
         grid: {
-          display: true,
+          display: false,
         },
         legend: {
           display: false,
         },
-        min: -10,
-        max: 20,
+        min: -15,
+        max: 15,
       },
     },
   },
